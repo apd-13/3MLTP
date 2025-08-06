@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Month Lacrosse Training Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF; /* Pure White */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-step {
+            border-color: #A7A9AC; /* Cool Grey */
+            background-color: #FFFFFF; /* Pure White */
+        }
+        .flowchart-line {
+            background-color: #A7A9AC; /* Cool Grey */
+        }
+        .kpi-card {
+            background-color: #002868; /* Navy Blue */
+            color: #FFFFFF; /* Pure White */
+        }
+        .accent-color { color: #FFD700; /* Gold Accent */ } /* Changed from Green to Gold */
+        .text-main { color: #C8102E; /* Patriot Red */ }
+        .text-secondary { color: #1C1C1C; /* Charcoal Black */ }
+        .appendix-item {
+            background-color: #FFFFFF; /* Pure White */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            border: 1px solid #A7A9AC; /* Cool Grey */
+        }
+        .spreadsheet-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .spreadsheet-table th, .spreadsheet-table td {
+            border: 1px solid #A7A9AC; /* Cool Grey */
+            padding: 10px; /* Kept compact as requested */
+            text-align: left;
+            vertical-align: top;
+        }
+        .spreadsheet-table th {
+            background-color: #002868; /* Navy Blue */
+            color: #FFFFFF; /* Pure White */
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+        }
+        .spreadsheet-table tbody tr:nth-child(odd) {
+            background-color: #F0F0F0; /* Light Grey for contrast */
+        }
+        .spreadsheet-table tbody tr:nth-child(even) {
+            background-color: #FFFFFF; /* Pure White */
+        }
+        .spreadsheet-table td {
+            color: #1C1C1C; /* Charcoal Black */
+            font-size: 0.875rem;
+        }
+        .spreadsheet-table td strong {
+            color: #C8102E; /* Patriot Red */
+        }
+        .navy-text {
+            color: #002868; /* Navy Blue */
+        }
+        /* Custom styles for footer quote */
+        .motivational-quote {
+            font-size: 1.5rem; /* Larger font size */
+            font-style: italic;
+            font-weight: 700; /* Bold */
+            color: #002868; /* Changed to Navy Blue */
+            line-height: 1.4;
+        }
+        .grant-ament-quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #C8102E; /* Patriot Red */
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12 flex flex-col items-center justify-center">
+            <!-- <img src="logo.png" alt="Logo" class="h-24 w-24 mb-4"> --> <!-- Added Logo -->
+            <h1 class="text-4xl md:text-6xl font-black text-main mb-2">UNLEASH YOUR POWER</h1> <!-- Changed Title -->
+            <p class="text-lg md:text-xl text-secondary">12-Week Lacrosse Athlete Development Plan</p>
+            <p class="grant-ament-quote">"You earn confidence in the hours no one sees. The lights only show who already put in the work." - Grant Ament</p> <!-- Grant Ament Quote with attribution -->
+        </header>
+
+        <section class="mb-16">
+            <p class="text-center max-w-3xl mx-auto text-secondary mb-8">This application visualizes a <b>supplemental</b> 3-month training program designed to elevate your lacrosse game, specifically focusing on <b>explosiveness, short-area speed, and direction changes</b>. All drills are suitable for <b>indoor mats</b> and are designed to complement a tackle football schedule without overexertion.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                <div class="kpi-card rounded-lg shadow-lg p-6">
+                    <p class="text-6xl font-black text-main">3</p> <!-- Changed to Patriot Red -->
+                    <p class="font-semibold text-lg text-pure-white">Months of Focus</p>
+                </div>
+                <div class="kpi-card rounded-lg shadow-lg p-6">
+                    <p class="text-6xl font-black text-main">3</p> <!-- Changed to Patriot Red -->
+                    <p class="font-semibold text-lg text-pure-white">Sessions Per Week</p>
+                </div>
+                <div class="kpi-card rounded-lg shadow-lg p-6">
+                    <p class="text-6xl font-black text-main">1</p> <!-- Changed to Patriot Red -->
+                    <p class="font-semibold text-lg text-pure-white">Goal: Dominate</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold navy-text text-center mb-4">The 3-Month Journey</h2> <!-- Changed to Navy Blue -->
+            <p class="text-center max-w-3xl mx-auto text-secondary mb-8">The program is structured in three distinct, one-month phases. We start by building a solid foundation with perfect technique, then ramp up the intensity and complexity of the drills, and finally, focus on converting that new athleticism into game-changing power and on-field application.</p>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                <div class="w-full md:w-1/3 flowchart-step p-6 rounded-lg shadow-md border-l-4">
+                    <h3 class="font-bold text-xl text-main">Month 1</h3> <!-- Changed to Patriot Red -->
+                    <p class="font-semibold navy-text">Foundation & Form</p> <!-- Changed to Navy Blue -->
+                    <p class="text-secondary text-sm mt-2">Master fundamental movements with perfect technique to build a base for future power.</p>
+                </div>
+                <div class="w-px h-8 md:w-16 md:h-px flowchart-line"></div>
+                <div class="w-full md:w-1/3 flowchart-step p-6 rounded-lg shadow-md border-l-4">
+                    <h3 class="font-bold text-xl text-main">Month 2</h3> <!-- Changed to Patriot Red -->
+                    <p class="font-semibold navy-text">Intensity & Progression</p> <!-- Changed to Navy Blue -->
+                    <p class="text-secondary text-sm mt-2">Increase the challenge with more complex drills and higher intensity to build real athleticism.</p>
+                </div>
+                <div class="w-px h-8 md:w-16 md:h-px flowchart-line"></div>
+                <div class="w-full md:w-1/3 flowchart-step p-6 rounded-lg shadow-md border-l-4">
+                    <h3 class="font-bold text-xl text-main">Month 3</h3> <!-- Changed to Patriot Red -->
+                    <p class="font-semibold navy-text">Power & Application</p> <!-- Changed to Navy Blue -->
+                    <p class="text-secondary text-sm mt-2">Translate training into on-field performance with a focus on peak power and game-speed simulation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold navy-text text-center mb-4">The Weekly Blueprint</h2> <!-- Changed to Navy Blue -->
+            <p class="text-center max-w-3xl mx-auto text-secondary mb-8">Each weekly session is structured to develop different aspects of athleticism. The training program systematically develops key athletic attributes across the week: Monday sessions prioritize Explosiveness & Agility for quick, powerful movements, while Wednesday workouts focus on Speed & Agility to enhance linear quickness and reinforce reactive footwork. Friday then shifts to Power & Core development, building foundational strength and explosive full-body power.  These charts break down the percentage of focus across key attributes for each day of the week.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold navy-text text-center mb-4">Monday Focus</h3> <!-- Changed to Navy Blue -->
+                    <div class="chart-container">
+                        <canvas id="mondayFocusChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold navy-text text-center mb-4">Wednesday Focus</h3> <!-- Changed to Navy Blue -->
+                    <div class="chart-container">
+                        <canvas id="wednesdayFocusChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold navy-text text-center mb-4">Friday Focus</h3> <!-- Changed to Navy Blue -->
+                    <div class="chart-container">
+                        <canvas id="fridayFocusChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold navy-text text-center mb-4">Developing the Complete Athlete</h2> <!-- Changed to Navy Blue -->
+            <p class="text-center max-w-3xl mx-auto text-secondary mb-8">This plan targets the key physical attributes of an elite lacrosse attackman. The radar chart shows how the different workout focuses contribute to building a well-rounded athletic profile, turning weaknesses into strengths. The two datasets represent the primary focus of your Monday/Wednesday sessions and your Friday session.</p>
+            <div class="bg-white p-6 rounded-lg shadow-md max-w-2xl mx-auto">
+                <div class="chart-container">
+                    <canvas id="athleteAttributesChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold navy-text text-center mb-4">Focus Area Breakdowns</h2> <!-- Changed to Navy Blue -->
+            <p class="text-center max-w-xl mx-auto text-secondary mb-8">Dive deeper into each key athletic attribute. These sections highlight the core principles and primary drills used to develop each area.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+                <div class="order-2 md:order-1 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-3xl font-bold navy-text mb-4">Explosiveness Focus</h3> <!-- Changed to Navy Blue -->
+                    <p class="text-secondary mb-6">Plyometrics are the core of this plan, training muscles to produce maximum force in minimum time. This chart highlights the primary focus of each key explosive movement in the program.</p>
+                    <div class="chart-container h-[350px] md:h-[400px]">
+                        <canvas id="plyoFocusChart"></canvas>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-3xl font-bold navy-text mb-4">Agility Focus</h3> <!-- Changed to Navy Blue -->
+                    <p class="text-secondary mb-6">Agility is the ability to change direction quickly and efficiently. This involves rapid deceleration, re-acceleration, and precise footwork. This chart highlights the primary focus of each key agility movement in the program.</p>
+                    <div class="chart-container h-[350px] md:h-[400px]">
+                        <canvas id="agilityFocusChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-3xl font-bold navy-text mb-4">Speed Focus</h3> <!-- Changed to Navy Blue -->
+                    <p class="text-secondary mb-6">Speed refers to the ability to move quickly over a distance. In lacrosse, this often means short bursts of acceleration and maintaining top speed over short distances. This chart highlights the primary focus of each key speed movement in the program.</p>
+                    <div class="chart-container h-[350px] md:h-[400px]">
+                        <canvas id="speedFocusChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-3xl font-bold navy-text mb-4">Strength Focus</h3> <!-- Changed to Navy Blue -->
+                    <p class="text-secondary mb-6">Building foundational strength provides the power base for all explosive movements and helps prevent injuries. This includes core stability and unilateral leg strength. This chart highlights the primary focus of each key strength movement in the program.</p>
+                    <div class="chart-container h-[350px] md:h-[400px]">
+                        <canvas id="strengthFocusChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-3xl font-bold navy-text mb-4">Power Focus</h3> <!-- Changed to Navy Blue -->
+                    <p class="text-secondary mb-6">Power is the ability to produce maximum force in the shortest amount of time. This is crucial for jumping, throwing, and explosive bursts on the field. This chart highlights the primary focus of each key power movement in the program.</p>
+                    <div class="chart-container h-[350px] md:h-[400px]">
+                        <canvas id="powerFocusChart"></canvas>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl font-bold navy-text text-center mb-4">Coaching Keys to Success</h2> <!-- Changed to Navy Blue -->
+                    <p class="text-center max-w-xl mx-auto text-secondary mb-8">Beyond the exercises, success lies in the execution. These core principles are the most important coaching points to remember during every single session. They are the foundation of safe and effective training.</p>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg shadow border border-cool-grey">
+                            <h4 class="font-bold navy-text">1. Land Softly, Explode Quickly</h4> <!-- Changed to Navy Blue -->
+                            <p class="text-secondary text-sm">Absorb every landing to protect joints, then minimize ground contact time to be more explosive.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow border border-cool-grey">
+                            <h4 class="font-bold navy-text">2. Low Center of Gravity</h4> <!-- Changed to Navy Blue -->
+                            <p class="text-secondary text-sm">In agility drills, stay low. A lower center of gravity allows for faster, more powerful changes of direction.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow border border-cool-grey">
+                            <h4 class="font-bold navy-text">3. Engage the Core</h4> <!-- Changed to Navy Blue -->
+                            <p class="text-secondary text-sm">Your core is your engine. Keep it tight in every exercise to transfer power efficiently.</p>
+                        </div>
+                         <div class="bg-white p-4 rounded-lg shadow border border-cool-grey">
+                            <h4 class="font-bold navy-text">4. Form Over Everything</h4> <!-- Changed to Navy Blue -->
+                            <p class="text-secondary text-sm">Perfect form is more important than speed or weight. Quality reps build a strong foundation and prevent injury.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold navy-text text-center mb-4">Training Calendar</h2> <!-- Changed to Navy Blue -->
+            <p class="text-center max-w-3xl mx-auto text-secondary mb-8">This comprehensive spreadsheet provides a detailed, week-by-week breakdown of the entire 12-week training plan. Each row represents a specific exercise, including its sets, reps, estimated duration, and a brief description for quick reference. Refer to the appendix below for full coaching details.</p>
+            <div class="bg-white p-6 rounded-lg shadow-md overflow-x-auto">
+                <table id="trainingSpreadsheet" class="spreadsheet-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 6%;">Week</th>
+                            <th style="width: 6%;">Day</th>
+                            <th style="width: 12%;">Exercise Name</th>
+                            <th style="width: 8%;">Sets & Reps</th>
+                            <th style="width: 8%;">Est. Duration</th>
+                            <th style="width: 7%;">Rest Sets</th>
+                            <th style="width: 7%;">Rest Drills</th>
+                            <th style="width: 24%;">Description</th>
+                            <th style="width: 22%;">Coaching Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Spreadsheet rows will be populated here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold navy-text text-center mb-4">Exercise Appendix</h2> <!-- Changed to Navy Blue -->
+            <p class="text-center max-w-3xl mx-auto text-secondary mb-8">This appendix provides detailed descriptions and coaching focus areas for each exercise in the training plan. Refer to this section for proper form and technique to maximize effectiveness and prevent injury.</p>
+            <div id="exerciseAppendix" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Appendix items will be populated here by JavaScript -->
+            </div>
+        </section>
+
+        <footer class="text-center mt-12 py-6 border-t border-cool-grey">
+            <p class="motivational-quote max-w-3xl mx-auto">“The harder it gets, the happier I am - because I know no one else will follow. Shift from ‘This is hard’ to ‘No one else can do this,’ and it’s not ‘Poor me’ anymore. It’s ‘Poor everyone else who’s going to have to try to follow me.’”</p>
+        </footer>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Define the new color palette
+            const PALETTE = {
+                patriotRed: '#C8102E',
+                navyBlue: '#002868',
+                pureWhite: '#FFFFFF',
+                charcoalBlack: '#1C1C1C',
+                coolGrey: '#A7A9AC',
+                goldAccent: '#FFD700' // Changed from newGreen to goldAccent
+            };
+
+            const FONT_COLOR = PALETTE.charcoalBlack; // Use charcoal black for general text
+            const GRID_COLOR = PALETTE.coolGrey; // Use cool grey for chart grids
+
+            const wrapLabel = (str, maxLen) => {
+                if (str.length <= maxLen) {
+                    return str;
+                }
+                const words = str.split(' ');
+                let currentLine = '';
+                const lines = [];
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).trim().length > maxLen && currentLine.length > 0) {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                }
+                if (currentLine.length > 0) {
+                    lines.push(currentLine);
+                }
+                return lines;
+            };
+
+            // Custom plugin for Chart.js to display percentages inside doughnut segments
+            const doughnutPercentagePlugin = {
+                id: 'doughnutPercentage',
+                afterDraw(chart) {
+                    const ctx = chart.ctx;
+                    const dataset = chart.data.datasets[0];
+                    const total = dataset.data.reduce((sum, value) => sum + value, 0);
+
+                    chart.getDatasetMeta(0).data.forEach((arc, i) => {
+                        const { x, y } = arc.tooltipPosition();
+                        const percentage = ((dataset.data[i] / total) * 100).toFixed(0);
+
+                        // Only draw if percentage is meaningful (e.g., > 0)
+                        if (percentage > 0) {
+                            ctx.save();
+                            ctx.font = 'bold 12px Inter'; // Font for percentage
+                            ctx.fillStyle = PALETTE.pureWhite; // White text color
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'middle';
+
+                            // Calculate the position for the text inside the arc
+                            const midAngle = arc.startAngle + (arc.endAngle - arc.startAngle) / 2;
+                            const radius = (arc.outerRadius + arc.innerRadius) / 2;
+                            const textX = x + Math.cos(midAngle) * 0.7 * radius; // Adjust 0.7 for position
+                            const textY = y + Math.sin(midAngle) * 0.7 * radius; // Adjust 0.7 for position
+
+                            ctx.fillText(`${percentage}%`, textX, textY);
+                            ctx.restore();
+                        }
+                    });
+                }
+            };
+
+            // Register the plugin
+            Chart.register(doughnutPercentagePlugin);
+
+            // Define focus area contributions for each session type
+            const focusContributions = {
+                "Explosiveness & Agility (Indoor)": { Explosiveness: 5, Agility: 5, Speed: 3, Strength: 1, Power: 3 },
+                "Speed & Agility (Indoor)": { Explosiveness: 3, Agility: 5, Speed: 5, Strength: 1, Power: 2 },
+                "Power & Core (Indoor)": { Explosiveness: 3, Agility: 2, Speed: 1, Strength: 4, Power: 5 },
+                "Explosiveness & Multi-directional Agility (Indoor)": { Explosiveness: 5, Agility: 5, Speed: 4, Strength: 2, Power: 4 },
+                "Speed & Quickness (Indoor)": { Explosiveness: 4, Agility: 5, Speed: 5, Strength: 1, Power: 2 },
+                "Power & Unilateral Strength (Indoor)": { Explosiveness: 4, Agility: 2, Speed: 1, Strength: 5, Power: 5 },
+                "Explosive Power & Complex Agility (Indoor)": { Explosiveness: 5, Agility: 5, Speed: 4, Strength: 3, Power: 5 },
+                "Game Speed & Reaction (Indoor)": { Explosiveness: 4, Agility: 5, Speed: 5, Strength: 2, Power: 3 },
+                "Integrated Power & Core (Indoor)": { Explosiveness: 4, Agility: 3, Speed: 2, Strength: 5, Power: 5 }
+            };
+
+            const createDoughnutChart = (canvasId, title, data) => {
+                const ctx = document.getElementById(canvasId).getContext('2d');
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Explosiveness', 'Agility', 'Speed', 'Strength', 'Power'],
+                        datasets: [{
+                            label: title,
+                            data: data,
+                            backgroundColor: [
+                                PALETTE.patriotRed,      // Explosiveness (Red)
+                                PALETTE.navyBlue,        // Agility (Blue)
+                                PALETTE.goldAccent,      // Speed (Yellow)
+                                PALETTE.coolGrey,        // Strength (Grey)
+                                PALETTE.charcoalBlack    // Power (Black)
+                            ],
+                            borderColor: PALETTE.pureWhite,
+                            borderWidth: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    color: FONT_COLOR,
+                                    font: { size: 12 },
+                                    boxWidth: 20,
+                                    padding: 20
+                                }
+                            },
+                            tooltip: { enabled: false } // Disable tooltips
+                        },
+                        cutout: '60%'
+                    }
+                });
+            };
+
+            // Initial chart data for Week 1 (as an example, will be dynamic based on week/day)
+            const week1MondayFocus = focusContributions["Explosiveness & Agility (Indoor)"];
+            const week1WednesdayFocus = focusContributions["Speed & Agility (Indoor)"];
+            const week1FridayFocus = focusContributions["Power & Core (Indoor)"];
+
+            createDoughnutChart('mondayFocusChart', 'Monday Focus', Object.values(week1MondayFocus));
+            createDoughnutChart('wednesdayFocusChart', 'Wednesday Focus', Object.values(week1WednesdayFocus));
+            createDoughnutChart('fridayFocusChart', 'Friday Focus', Object.values(week1FridayFocus));
+
+
+            const athleteAttributesCtx = document.getElementById('athleteAttributesChart').getContext('2d');
+            new Chart(athleteAttributesCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['Explosiveness', 'Agility', 'Speed', 'Strength', 'Power'],
+                    datasets: [{
+                        label: 'Mon/Wed Focus',
+                        data: [5, 5, 4, 2, 3],
+                        backgroundColor: `${PALETTE.patriotRed}40`, /* 40 for transparency */
+                        borderColor: PALETTE.patriotRed,
+                        pointBackgroundColor: PALETTE.patriotRed,
+                        pointBorderColor: PALETTE.pureWhite,
+                        pointHoverBackgroundColor: PALETTE.pureWhite,
+                        pointHoverBorderColor: PALETTE.patriotRed
+                    }, {
+                        label: 'Friday Focus',
+                        data: [3, 3, 2, 4, 5],
+                        backgroundColor: `${PALETTE.navyBlue}40`, /* 40 for transparency */
+                        borderColor: PALETTE.navyBlue,
+                        pointBackgroundColor: PALETTE.navyBlue,
+                        pointBorderColor: PALETTE.pureWhite,
+                        pointHoverBackgroundColor: PALETTE.pureWhite,
+                        pointHoverBorderColor: PALETTE.navyBlue
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: FONT_COLOR,
+                                font: { size: 12 },
+                                boxWidth: 20,
+                                padding: 20
+                            }
+                        },
+                        tooltip: { enabled: false } // Disable tooltips
+                    },
+                    scales: {
+                        r: {
+                            angleLines: { color: GRID_COLOR },
+                            grid: { color: GRID_COLOR },
+                            pointLabels: {
+                                color: FONT_COLOR,
+                                font: { size: 12, weight: 'bold' }
+                            },
+                            ticks: {
+                                backdropColor: `${PALETTE.pureWhite}C0`, /* C0 for transparency */
+                                color: FONT_COLOR,
+                                stepSize: 1
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 5
+                        }
+                    }
+                }
+            });
+            
+            const createBarChart = (canvasId, title, labels, data) => {
+                const ctx = document.getElementById(canvasId).getContext('2d');
+                const backgroundColors = [
+                    PALETTE.patriotRed,    // Red (top/first)
+                    PALETTE.navyBlue,      // Blue
+                    PALETTE.goldAccent,    // Yellow (formerly Green)
+                    PALETTE.coolGrey,      // Grey
+                    PALETTE.charcoalBlack  // Black
+                ];
+                // Ensure enough colors for all labels, repeating if necessary
+                const colorsToUse = labels.map((_, i) => backgroundColors[i % backgroundColors.length]);
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: title,
+                            data: data,
+                            backgroundColor: colorsToUse,
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: { enabled: false } // Disable tooltips
+                        },
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                grid: {
+                                    color: GRID_COLOR,
+                                    drawOnChartArea: false
+                                },
+                                ticks: {
+                                    color: FONT_COLOR,
+                                    stepSize: 1
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Relative Contribution Score',
+                                    color: FONT_COLOR
+                                }
+                            },
+                            y: {
+                                grid: {
+                                    display: false
+                                },
+                                ticks: {
+                                    color: FONT_COLOR,
+                                    font: {
+                                        size: 14,
+                                        weight: '600'
+                                    },
+                                    padding: 10 // Add padding to prevent cutoff
+                                }
+                            }
+                        }
+                    }
+                });
+            };
+
+            // Explosiveness Chart
+            createBarChart('plyoFocusChart', 'Contribution to Explosive Power',
+                ['Box Jumps', 'Hurdle Hops', 'Broad Jumps', wrapLabel('Medicine Ball Slams', 16)],
+                [5, 4, 5, 4]
+            );
+
+            // Agility Chart
+            createBarChart('agilityFocusChart', 'Contribution to Agility',
+                ['Ladder: I-Steps', 'Ladder: Lateral Shuffle', 'Ladder: Crossover Steps', 'Ladder: Reaction Drills', 'Hurdle Hops (Lateral)'],
+                [5, 5, 5, 4, 4]
+            );
+
+            // Speed Chart
+            createBarChart('speedFocusChart', 'Contribution to Speed',
+                ['Jump Rope', 'Broad Jumps (standing)', 'Broad Jumps (Consecutive)'],
+                [4, 5, 5]
+            );
+
+            // Strength Chart
+            createBarChart('strengthFocusChart', 'Contribution to Strength',
+                ['Plank', 'Glute Bridges', 'Plyo Box Step-Ups'],
+                [4, 4, 5]
+            );
+
+            // Power Chart
+            createBarChart('powerFocusChart', 'Contribution to Power',
+                ['Medicine Ball Slams', 'Medicine Ball Overhead Throws', 'Medicine Ball Power Throws (Rotational)', 'Medicine Ball Overhead Slam (Burpee Combo)', 'Box Jumps', 'Hurdle Jumps (Max Height/Distance)', 'Single Leg Box Jumps'],
+                [5, 5, 5, 5, 5, 4, 5]
+            );
+
+
+            const trainingScheduleByWeek = [
+                // Week 1
+                {
+                    week: 1,
+                    Monday: {
+                        focus: "Explosiveness & Agility (Indoor)",
+                        exercises: [
+                            { name: "Dynamic Warm-up", setsReps: "5-10 min", estimatedDuration: "5-10 min", description: "Begin with 2-3 minutes of light cardio like jump rope to elevate heart rate. Follow with dynamic stretches: perform 10-15 arm circles forward and backward, 10-15 leg swings (forward/backward and side-to-side) per leg, 10 torso twists each side, 10 high knees per leg, and 10 butt kicks per leg. Focus on controlled, fluid movements to prepare muscles and joints.", coaching: "Ensure full range of motion in all dynamic movements. Do not static stretch during the warm-up. The goal is to gradually increase body temperature and blood flow, preparing the body for more intense activity.", restBetweenSets: "N/A", restBetweenExercises: "1 min" },
+                            { name: "Hurdle Hops (12\" hurdles)", setsReps: "3 sets of 5 hurdles", estimatedDuration: "2-3 min", description: "Set up 5 hurdles in a line, 1-2 feet apart. Hop over each with both feet, landing softly and immediately hopping to the next hurdle. Focus on minimizing ground contact time.", coaching: "Land softly, absorb impact through bent knees, minimize ground contact time to be more explosive, and maintain a consistent rhythm.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Ladder: I-Steps", setsReps: "3 sets of 2 passes", estimatedDuration: "2-3 min", description: "Stand at one end of the agility ladder. Step into each square with one foot, then the other, moving forward quickly through the ladder.", coaching: "Focus on quick feet, staying light on your toes, and keeping your eyes forward to maintain balance and speed. Avoid looking down at your feet.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Box Jumps (Plyo Box)", setsReps: "3 sets of 5 reps", estimatedDuration: "3-4 min", description: "Stand in front of a sturdy plyo box (appropriate height). Swing your arms back, then explode upwards, jumping onto the box. Land softly with bent knees, ensuring your entire foot lands on the box. Step back down safely.", coaching: "Emphasize landing softly to absorb impact and protect joints. Explode upwards powerfully. Ensure full foot contact on the box for stability and safety.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Medicine Ball Slams", setsReps: "3 sets of 8 reps", estimatedDuration: "3-4 min", description: "Hold a medicine ball with both hands overhead, fully extending your body. Forcefully slam the ball down to the ground directly in front of you, engaging your core and glutes. Squat down to pick up the ball in a controlled manner.", coaching: "Use your whole body to generate power, exploding downwards from your hips and core. Focus on a powerful throw and control when picking up the ball.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Cool-down", setsReps: "5 min", estimatedDuration: "5 min", description: "Perform static stretches, holding each for 20-30 seconds. Target major muscle groups: hamstrings, quadriceps, calves, and chest.", coaching: "Focus on gentle, sustained stretches. Do not bounce. This helps improve flexibility and aids in recovery.", restBetweenSets: "N/A", restBetweenExercises: "N/A" }
+                        ]
+                    },
+                    Wednesday: {
+                        focus: "Speed & Agility (Indoor)",
+                        exercises: [
+                            { name: "Dynamic Warm-up", setsReps: "5-10 min", estimatedDuration: "5-10 min", description: "Begin with 2-3 minutes of light cardio like jump rope to elevate heart rate. Follow with dynamic stretches: perform 10-15 arm circles forward and backward, 10-15 leg swings (forward/backward and side-to-side) per leg, 10 torso twists each side, 10 high knees per leg, and 10 butt kicks per leg. Focus on controlled, fluid movements to prepare muscles and joints.", coaching: "Emphasize controlled movements and getting the heart rate up.", restBetweenSets: "N/A", restBetweenExercises: "1 min" },
+                            { name: "Jump Rope (Basic Jumps)", setsReps: "3 sets of 45-60 sec", estimatedDuration: "3-5 min", description: "Jump with both feet together over the rope, maintaining a consistent rhythm. Keep jumps low to the ground.", coaching: "Stay light on your toes with soft knees. Maintain a consistent rhythm using your wrists to turn the rope, not your arms.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Ladder: Lateral Shuffle", setsReps: "3 sets of 2 passes (each direction)", estimatedDuration: "2-3 min", description: "Stand sideways to the agility ladder. Shuffle sideways through the ladder, placing one foot in each square, then the other foot into the next square. Maintain a low athletic stance.", coaching: "Stay low in an athletic stance. Focus on quick side-to-side steps and avoid crossing your feet to maintain balance and readiness for change of direction.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Broad Jumps (standing)", setsReps: "3 sets of 5 reps", estimatedDuration: "3-4 min", description: "Stand with feet shoulder-width apart. Swing your arms back, bend your knees, and explode forward for maximum horizontal distance. Land softly with bent knees.", coaching: "Explode horizontally, driving through your hips and glutes. Land softly, absorbing the impact to protect your joints and prepare for immediate re-acceleration.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Cool-down", setsReps: "5 min", estimatedDuration: "5 min", description: "Perform static stretches, holding each for 20-30 seconds. Target major muscle groups: hamstrings, quadriceps, calves, and chest.", coaching: "Focus on gentle, sustained stretches. Do not bounce. This helps improve flexibility and aids in recovery.", restBetweenSets: "N/A", restBetweenExercises: "N/A" }
+                        ]
+                    },
+                    Friday: {
+                        focus: "Power & Core (Indoor)",
+                        exercises: [
+                            { name: "Dynamic Warm-up", setsReps: "5-10 min", estimatedDuration: "5-10 min", description: "Begin with 2-3 minutes of light cardio like jump rope to elevate heart rate. Follow with dynamic stretches: perform 10-15 arm circles forward and backward, 10-15 leg swings (forward/backward and side-to-side) per leg, 10 torso twists each side, 10 high knees per leg, and 10 butt kicks per leg. Focus on controlled, fluid movements to prepare muscles and joints.", coaching: "Emphasize controlled movements and getting the heart rate up.", restBetweenSets: "N/A", restBetweenExercises: "1 min" },
+                            { name: "Plank", setsReps: "3 sets, hold 30 sec", estimatedDuration: "2-3 min", description: "Start in a push-up position, then lower onto your forearms, keeping your body in a straight line from head to heels. Engage your core and glutes.", coaching: "Keep your core tight and hips level, avoiding any sagging or arching in your lower back. Maintain a neutral spine.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Glute Bridges", setsReps: "3 sets of 12 reps", estimatedDuration: "2-3 min", description: "Lie on your back with knees bent and feet flat on the floor, hip-width apart. Lift your hips off the ground until your body forms a straight line from your shoulders to your knees, squeezing your glutes at the top. Slowly lower back down.", coaching: "Squeeze your glutes forcefully at the top of the movement. Focus on a controlled lower, engaging your core throughout the exercise to prevent arching your back.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Single Leg Hurdle Hops", setsReps: "3 sets of 3 hurdles (each leg)", estimatedDuration: "3-4 min", description: "Set up 3 hurdles (12 inches) in a line, 1-2 feet apart. Hop over each hurdle on one leg, focusing on balance, control, and a soft landing before hopping to the next. Complete all reps on one leg before switching.", coaching: "Focus on stability throughout the movement, especially during the landing. Ensure a soft landing to absorb impact, and maintain controlled movement over each hurdle.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Plyo Box Step-Ups", setsReps: "3 sets of 8 reps (each leg)", estimatedDuration: "3-4 min", description: "Stand in front of a plyo box. Step onto the box with one foot, driving up through the heel of your lead leg until you are standing tall on the box. Step back down with control. Alternate legs or complete all reps on one side before switching.", coaching: "Focus on controlled movement, driving powerfully through the heel of your lead foot. Keep your core engaged to maintain stability and prevent lateral swaying.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Medicine Ball Overhead Throws", setsReps: "3 sets of 10 reps", estimatedDuration: "3-4 min", description: "Hold a medicine ball with both hands. Extend your arms overhead and throw the ball forward for distance, using your legs and core to generate power. Retrieve the ball and repeat.", coaching: "Generate power from your legs and core, driving through your hips and extending fully through your arms. Focus on maximizing the distance of the throw, emphasizing full body extension.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Russian Twists (with medicine ball)", setsReps: "3 sets of 15-20 twists", estimatedDuration: "2-3 min", description: "Sit on the floor with knees bent, feet flat or slightly off the ground (for more challenge). Hold a medicine ball with both hands. Twist your torso from side to side, touching the medicine ball to the floor beside your hips on each side.", coaching: "Engage your obliques and maintain a controlled twisting motion. Keep your back straight and avoid rounding. The movement should come from your core, not just your arms.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Cool-down", setsReps: "5 min", estimatedDuration: "5 min", description: "Perform static stretches, holding each for 20-30 seconds. Target major muscle groups: hamstrings, quadriceps, calves, and chest.", coaching: "Focus on gentle, sustained stretches. Do not bounce. This helps improve flexibility and aids in recovery.", restBetweenSets: "N/A", restBetweenExercises: "N/A" }
+                        ]
+                    }
+                },
+                // Week 2 (Copy of Week 1 for progression)
+                {
+                    week: 2,
+                    Monday: {},
+                    Wednesday: {},
+                    Friday: {}
+                },
+                // Week 3 (Copy of Week 1 for progression)
+                {
+                    week: 3,
+                    Monday: {},
+                    Wednesday: {},
+                    Friday: {}
+                },
+                // Week 4 (Copy of Week 1 for progression)
+                {
+                    week: 4,
+                    Monday: {},
+                    Wednesday: {},
+                    Friday: {}
+                },
+                // Week 5 (Month 2 Start)
+                {
+                    week: 5,
+                    Monday: {
+                        focus: "Explosiveness & Multi-directional Agility (Indoor)",
+                        exercises: [
+                            { name: "Dynamic Warm-up", setsReps: "5-10 min", estimatedDuration: "5-10 min", description: "Begin with 2-3 minutes of light cardio like jump rope to elevate heart rate. Follow with dynamic stretches: perform 10-15 arm circles forward and backward, 10-15 leg swings (forward/backward and side-to-side) per leg, 10 torso twists each side, 10 high knees per leg, and 10 butt kicks per leg. Focus on controlled, fluid movements to prepare muscles and joints.", coaching: "Emphasize controlled movements and getting the heart rate up.", restBetweenSets: "N/A", restBetweenExercises: "1 min" },
+                            { name: "Hurdle Hops (Lateral)", setsReps: "3 sets of 5 hurdles (each direction)", estimatedDuration: "2-3 min", description: "Set up 5 hurdles (12 inches) in a line. Hop sideways over each hurdle with both feet, then progress to single leg hops if comfortable. Focus on quick lateral movement and minimizing ground contact.", coaching: "Focus on quick lateral movement, maintaining balance throughout the hops, and minimizing ground contact time to enhance explosiveness.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Ladder: Crossover Steps", setsReps: "3 sets of 2 passes (each direction)", estimatedDuration: "2-3 min", description: "Stand sideways to the agility ladder. Step diagonally through the ladder, crossing one foot over the other into each square. Move quickly and fluidly.", coaching: "Focus on fluid crossover steps, quick feet, and a coordinated arm swing to maintain balance and momentum. Keep your hips low and stable.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Box Jumps (Rebound Jumps)", setsReps: "3 sets of 5 reps", estimatedDuration: "3-4 min", description: "Jump onto a plyo box, landing softly. Immediately jump off the box and rebound into another jump onto the box, minimizing time on the ground between jumps.", coaching: "Minimize ground contact time between jumps. Focus on a quick transition from landing to jumping to enhance reactive strength and explosiveness.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Medicine Ball Slams", setsReps: "3 sets of 8 reps", estimatedDuration: "3-4 min", description: "Hold a medicine ball with both hands overhead, fully extending your body. Forcefully slam the ball down to the ground directly in front of you, engaging your core and glutes. Squat down to pick up the ball in a controlled manner.", coaching: "Use your whole body to generate power, exploding downwards from your hips and core. Focus on a powerful throw and control when picking up the ball. Increase intensity/speed from Month 1.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Cool-down", setsReps: "5 min", estimatedDuration: "5 min", description: "Perform static stretches, holding each for 20-30 seconds. Target major muscle groups: hamstrings, quadriceps, calves, and chest.", coaching: "Focus on gentle, sustained stretches. Do not bounce. This helps improve flexibility and aids in recovery.", restBetweenSets: "N/A", restBetweenExercises: "N/A" }
+                        ]
+                    },
+                    Wednesday: {
+                        focus: "Speed & Quickness (Indoor)",
+                        exercises: [
+                            { name: "Dynamic Warm-up", setsReps: "5-10 min", estimatedDuration: "5-10 min", description: "Begin with 2-3 minutes of light cardio like jump rope to elevate heart rate. Follow with dynamic stretches: perform 10-15 arm circles forward and backward, 10-15 leg swings (forward/backward and side-to-side) per leg, 10 torso twists each side, 10 high knees per leg, and 10 butt kicks per leg. Focus on controlled, fluid movements to prepare muscles and joints.", coaching: "Emphasize controlled movements and getting the heart rate up.", restBetweenSets: "N/A", restBetweenExercises: "1 min" },
+                            { name: "Jump Rope (Faster Pace/Variations)", setsReps: "3 sets of 60-90 sec", estimatedDuration: "3-5 min", description: "Increase your jump speed, try alternating feet for single-leg jumps, or attempt double unders (two rope rotations per jump).", coaching: "Focus on increasing speed and endurance while maintaining rhythm. Stay light on your toes and use your wrists for efficient rope turning.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Ladder: Lateral Shuffle", setsReps: "3 sets of 2 passes (each direction)", estimatedDuration: "2-3 min", description: "Stand sideways to the agility ladder. Shuffle sideways through the ladder, placing one foot in each square, then the other foot into the next square. Maintain a low athletic stance.", coaching: "Stay low in an athletic stance. Focus on quick side-to-side steps and avoid crossing your feet to maintain balance and readiness for change of direction. Increase speed and quickness from Month 1.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Broad Jumps (standing)", setsReps: "3 sets of 5 reps", estimatedDuration: "3-4 min", description: "Stand with feet shoulder-width apart. Swing your arms back, bend your knees, and explode forward for maximum horizontal distance. Land softly with bent knees.", coaching: "Explode horizontally, driving through your hips and glutes. Land softly, absorbing the impact to protect your joints and prepare for immediate re-acceleration. Focus on maximizing distance with a quick rebound into the next movement.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Cool-down", setsReps: "5 min", estimatedDuration: "5 min", description: "Perform static stretches, holding each for 20-30 seconds. Target major muscle groups: hamstrings, quadriceps, calves, and chest.", coaching: "Focus on gentle, sustained stretches. Do not bounce. This helps improve flexibility and aids in recovery.", restBetweenSets: "N/A", restBetweenExercises: "N/A" }
+                        ]
+                    },
+                    Friday: {
+                        focus: "Power & Unilateral Strength (Indoor)",
+                        exercises: [
+                            { name: "Dynamic Warm-up", setsReps: "5-10 min", estimatedDuration: "5-10 min", description: "Begin with 2-3 minutes of light cardio like jump rope to elevate heart rate. Follow with dynamic stretches: perform 10-15 arm circles forward and backward, 10-15 leg swings (forward/backward and side-to-side) per leg, 10 torso twists each side, 10 high knees per leg, and 10 butt kicks per leg. Focus on controlled, fluid movements to prepare muscles and joints.", coaching: "Emphasize controlled movements and getting the heart rate up.", restBetweenSets: "N/A", restBetweenExercises: "1 min" },
+                            { name: "Plank", setsReps: "3 sets, hold 45-60 sec", estimatedDuration: "2-3 min", description: "Start in a push-up position, then lower onto your forearms, keeping your body in a straight line from head to heels. Engage your core and glutes.", coaching: "Focus on maintaining a longer hold with perfect form. Keep your core tight, hips level, and avoid any sagging or arching in your lower back.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Glute Bridges", setsReps: "3 sets of 15 reps", estimatedDuration: "2-3 min", description: "Lie on your back with knees bent and feet flat on the floor, hip-width apart. Lift your hips off the ground until your body forms a straight line from your shoulders to your knees, squeezing your glutes at the top. Slowly lower back down.", coaching: "Focus on performing higher reps with a strong glute contraction at the top of the movement. Maintain control throughout the lower.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Single Leg Box Jumps (Low Box)", setsReps: "3 sets of 5 reps (each leg)", estimatedDuration: "3-4 min", description: "Stand in front of a low plyo box. Jump onto the box using a single leg, landing softly and maintaining balance. Step back down safely. Complete all reps on one leg before switching.", coaching: "Focus on balance and generating explosive power from a single leg. Land softly and with control to absorb impact and maintain stability.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Plyo Box Step-Ups", setsReps: "3 sets of 10 reps (each leg)", estimatedDuration: "3-4 min", description: "Stand in front of a plyo box. Step onto the box with one foot, driving up through the heel of your lead leg until you are standing tall on the box. Step back down with control. Alternate legs or complete all reps on one side before switching.", coaching: "Increase reps from Month 1, focusing on an explosive drive through the lead leg. Maintain controlled movement and keep your core engaged.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Medicine Ball Overhead Throws", setsReps: "3 sets of 10 reps", estimatedDuration: "3-4 min", description: "Hold a medicine ball with both hands. Extend your arms overhead and throw the ball forward for distance, using your legs and core to generate power. Retrieve the ball and repeat.", coaching: "Generate power from your legs and core, driving through your hips and extending fully through your arms. Focus on maximizing the distance of the throw, emphasizing full body extension.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Russian Twists (with medicine ball)", setsReps: "3 sets of 20-25 twists", estimatedDuration: "2-3 min", description: "Sit on the floor with knees bent, feet flat or slightly off the ground (for more challenge). Hold a medicine ball with both hands. Twist your torso from side to side, touching the medicine ball to the floor beside your hips on each side.", coaching: "Increase speed while maintaining control and engaging your obliques. The movement should be controlled and originate from your core, not just your arms. Keep your back straight.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Cool-down", setsReps: "5 min", estimatedDuration: "5 min", description: "Perform static stretches, holding each for 20-30 seconds. Target major muscle groups: hamstrings, quadriceps, calves, and chest.", coaching: "Focus on gentle, sustained stretches. Do not bounce. This helps improve flexibility and aids in recovery.", restBetweenSets: "N/A", restBetweenExercises: "N/A" }
+                        ]
+                    }
+                },
+                // Week 6-8 (Copy of Week 5 for progression)
+                { week: 6, Monday: {}, Wednesday: {}, Friday: {} },
+                { week: 7, Monday: {}, Wednesday: {}, Friday: {} },
+                { week: 8, Monday: {}, Wednesday: {}, Friday: {} },
+                // Week 9 (Month 3 Start)
+                {
+                    week: 9,
+                    Monday: {
+                        focus: "Explosive Power & Complex Agility (Indoor)",
+                        exercises: [
+                            { name: "Dynamic Warm-up", setsReps: "5-10 min", estimatedDuration: "5-10 min", description: "Begin with 2-3 minutes of light cardio like jump rope to elevate heart rate. Follow with dynamic stretches: perform 10-15 arm circles forward and backward, 10-15 leg swings (forward/backward and side-to-side) per leg, 10 torso twists each side, 10 high knees per leg, and 10 butt kicks per leg. Focus on controlled, fluid movements to prepare muscles and joints.", coaching: "Emphasize controlled movements and getting the heart rate up.", restBetweenSets: "N/A", restBetweenExercises: "1 min" },
+                            { name: "Hurdle Jumps (Max Height/Distance)", setsReps: "3 sets of 4-5 hurdles", estimatedDuration: "2-3 min", description: "Set up 4-5 hurdles (at a challenging height/distance). Focus on jumping as high or as far as possible over each hurdle, maintaining control and minimizing ground contact between jumps.", coaching: "Maximize vertical or horizontal displacement with each jump. Focus on a powerful take-off and quick rebound. Maintain control throughout the movement, especially during landing.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Ladder + Broad Jump Combo", setsReps: "3 sets of 2-3 reps", estimatedDuration: "3-4 min", description: "Perform a chosen agility ladder drill (e.g., I-steps, crossovers) for the full length of the ladder. Immediately upon exiting the ladder, transition into 2-3 consecutive broad jumps, maximizing distance with each jump.", coaching: "Focus on a seamless transition from the agility ladder to the broad jumps. Maintain speed and agility through the ladder, then generate explosive horizontal power in the jumps.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Box Jumps (Max Height/Depth Drop)", setsReps: "3 sets of 3-4 reps", estimatedDuration: "3-4 min", description: "For max height: Jump onto the highest safe plyo box you can. For depth drop: Step off a low box (e.g., 12-18 inches), land softly, and immediately rebound into a jump onto another box or vertically.", coaching: "For max height, focus on maximum vertical power. For depth drop, emphasize reactive strength: minimize ground contact time after stepping off the box before exploding into the jump.", restBetweenSets: "60-90 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Medicine Ball Power Throws (Rotational)", setsReps: "3 sets of 6-8 reps (each side)", estimatedDuration: "3-4 min", description: "Stand with feet shoulder-width apart, holding a medicine ball. Rotate your torso and throw the ball forcefully against a sturdy wall (if safe) or into open space, generating power from your hips and core.", coaching: "Generate power from your hips and core through a full rotational movement. Focus on a powerful release and controlled deceleration after the throw. Ensure safety if throwing against a wall.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Cool-down", setsReps: "5 min", estimatedDuration: "5 min", description: "Perform static stretches, holding each for 20-30 seconds. Target major muscle groups: hamstrings, quadriceps, calves, and chest.", coaching: "Focus on gentle, sustained stretches. Do not bounce. This helps improve flexibility and aids in recovery.", restBetweenSets: "N/A", restBetweenExercises: "N/A" }
+                        ]
+                    },
+                    Wednesday: {
+                        focus: "Game Speed & Reaction (Indoor)",
+                        exercises: [
+                            { name: "Dynamic Warm-up", setsReps: "5-10 min", estimatedDuration: "5-10 min", description: "Begin with 2-3 minutes of light cardio like jump rope to elevate heart rate. Follow with dynamic stretches: perform 10-15 arm circles forward and backward, 10-15 leg swings (forward/backward and side-to-side) per leg, 10 torso twists each side, 10 high knees per leg, and 10 butt kicks per leg. Focus on controlled, fluid movements to prepare muscles and joints.", coaching: "Emphasize controlled movements and getting the heart rate up.", restBetweenSets: "N/A", restBetweenExercises: "1 min" },
+                            { name: "Jump Rope (Complex Variations)", setsReps: "3 sets of 90-120 sec", estimatedDuration: "3-5 min", description: "Incorporate high knees, criss-cross jumps, double unders, and other complex patterns into your jump rope routine. Focus on continuous movement and coordination.", coaching: "Focus on coordination, endurance, and quick feet. Challenge yourself with new patterns while maintaining a consistent and fast rhythm.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Ladder: Reaction Drills", setsReps: "3 sets of 5-6 reps", estimatedDuration: "2-3 min", description: "Have a partner or parent call out a direction (e.g., 'sprint to end', 'lateral shuffle back', 'crossover left') or a number (for specific squares) while you are in the ladder. React quickly and explosively to the command.", coaching: "Focus on quick reaction time and an explosive first step in the called direction. Maintain agility and control throughout the movement, mimicking game-like scenarios.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Broad Jumps (Consecutive)", setsReps: "3 sets of 3-4 reps", estimatedDuration: "3-4 min", description: "Perform 3-4 broad jumps consecutively, maximizing distance with each jump and minimizing ground contact time between jumps. Land softly and immediately explode into the next jump.", coaching: "Focus on maintaining explosive power and rhythm across multiple jumps. Minimize the time spent on the ground between jumps to enhance reactive strength and endurance.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Cool-down", setsReps: "5 min", estimatedDuration: "5 min", description: "Perform static stretches, holding each for 20-30 seconds. Target major muscle groups: hamstrings, quadriceps, calves, and chest.", coaching: "Focus on gentle, sustained stretches. Do not bounce. This helps improve flexibility and aids in recovery.", restBetweenSets: "N/A", restBetweenExercises: "N/A" }
+                        ]
+                    },
+                    Friday: {
+                        focus: "Integrated Power & Core (Indoor)",
+                        exercises: [
+                            { name: "Dynamic Warm-up", setsReps: "5-10 min", estimatedDuration: "5-10 min", description: "Begin with 2-3 minutes of light cardio like jump rope to elevate heart rate. Follow with dynamic stretches: perform 10-15 arm circles forward and backward, 10-15 leg swings (forward/backward and side-to-side) per leg, 10 torso twists each side, 10 high knees per leg, and 10 butt kicks per leg. Focus on controlled, fluid movements to prepare muscles and joints.", coaching: "Emphasize controlled movements and getting the heart rate up.", restBetweenSets: "N/A", restBetweenExercises: "1 min" },
+                            { name: "Plank Variations", setsReps: "3 sets, hold 60 sec (or side planks 30s/side)", estimatedDuration: "3-4 min", description: "Progress from basic planks to variations such as holding for 60 seconds, or performing side planks (30 seconds per side), or incorporating leg lifts while holding a plank.", coaching: "Introduce side planks or planks with leg lifts to challenge advanced core stability. Maintain a straight line from head to heels, keeping the core tight and hips stable.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Single Leg Glute Bridges", setsReps: "3 sets of 10-12 reps (each leg)", estimatedDuration: "3-4 min", description: "Lie on your back with one knee bent and foot flat, and the other leg extended straight. Lift your hips off the ground, squeezing the glute of the working leg. Slowly lower back down. Complete all reps on one leg before switching.", coaching: "Focus on stability and a strong glute contraction on the single leg. Ensure your hips remain level throughout the movement, avoiding any rotation.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Single Leg Box Jumps (Higher Box)", setsReps: "3 sets of 4-5 reps (each leg)", estimatedDuration: "3-4 min", description: "Stand in front of a higher plyo box. Jump onto the box using a single leg, focusing on maximum vertical power. Land softly and maintain balance. Step back down safely. Complete all reps on one leg before switching.", coaching: "Maximize vertical height with each jump. Focus on generating explosive power from a single leg and maintaining control during the landing.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Medicine Ball Overhead Slam (Burpee Combo)", setsReps: "3 sets of 8 reps", estimatedDuration: "4-5 min", description: "<span class='text-main text-sm'>Medicine Ball Slam:</span> Hold a medicine ball with both hands overhead, fully extending your body. Forcefully slam the ball down to the ground directly in front of you, engaging your core and glutes. Squat down to pick up the ball.<span class='text-main text-sm'>Burpee:</span> From the squat position, kick your feet back into a plank position. Perform one push-up. Jump your feet back to the squat position. Explode upwards into a jump, reaching your hands overhead. Immediately transition from the burpee back into the medicine ball slam.", coaching: "Combine power with full-body conditioning and quick transitions. Focus on the explosive power of the slam, driving through the hips. For the burpee, maintain a strong plank during the push-up and drive through the legs for the jump. Emphasize a quick, fluid transition between the slam and the burpee to maximize conditioning benefits.", restBetweenSets: "45-60 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Russian Twists (Fast Pace)", setsReps: "3 sets of 25-30 twists", estimatedDuration: "2-3 min", description: "Sit on the floor with knees bent, feet flat or slightly off the ground (for more challenge). Hold a medicine ball with both hands. Twist your torso from side to side at a fast pace, touching the medicine ball to the floor beside your hips on each side.", coaching: "Increase speed while maintaining control and engaging your obliques. The movement should be controlled and originate from your core, not just your arms. Keep your back straight.", restBetweenSets: "30-45 sec", restBetweenExercises: "1-2 min" },
+                            { name: "Cool-down", setsReps: "5 min", estimatedDuration: "5 min", description: "Perform static stretches, holding each for 20-30 seconds. Target major muscle groups: hamstrings, quadriceps, calves, and chest.", coaching: "Focus on gentle, sustained stretches. Do not bounce. This helps improve flexibility and aids in recovery.", restBetweenSets: "N/A", restBetweenExercises: "N/A" }
+                        ]
+                    }
+                },
+                // Week 10-12 (Copy of Week 9 for progression)
+                { week: 10, Monday: {}, Wednesday: {}, Friday: {} },
+                { week: 11, Monday: {}, Wednesday: {}, Friday: {} },
+                { week: 12, Monday: {}, Wednesday: {}, Friday: {} }
+            ];
+
+            // Function to fill empty weeks with data from the first week of their respective month's phase
+            const fillEmptyWeeks = (plan) => {
+                for (let i = 0; i < plan.length; i++) {
+                    const weekData = plan[i];
+                    const baseWeekIndex = (weekData.week >= 9) ? 8 : (weekData.week >= 5) ? 4 : 0; // Index of Week 1, Week 5, or Week 9
+                    
+                    // Ensure all properties are deeply copied for exercises
+                    ['Monday', 'Wednesday', 'Friday'].forEach(dayKey => {
+                        if (!weekData[dayKey] || Object.keys(weekData[dayKey]).length === 0) {
+                            weekData[dayKey] = { ...plan[baseWeekIndex][dayKey] };
+                            if (weekData[dayKey].exercises) {
+                                weekData[dayKey].exercises = weekData[dayKey].exercises.map(ex => ({ ...ex }));
+                            }
+                        }
+                    });
+                }
+            };
+
+            fillEmptyWeeks(trainingScheduleByWeek); // Call fillEmptyWeeks immediately after definition
+
+            const allExercises = new Map();
+            trainingScheduleByWeek.forEach(weekData => {
+                ['Monday', 'Wednesday', 'Friday'].forEach(dayKey => {
+                    if (weekData[dayKey] && weekData[dayKey].exercises) {
+                        weekData[dayKey].exercises.forEach(exercise => {
+                            let description = exercise.description;
+                            let coaching = exercise.coaching;
+
+                            if (!allExercises.has(exercise.name)) {
+                                allExercises.set(exercise.name, {
+                                    description: description,
+                                    coaching: coaching
+                                });
+                            }
+                        });
+                    }
+                });
+            });
+
+            const exerciseAppendixDiv = document.getElementById('exerciseAppendix');
+            exerciseAppendixDiv.innerHTML = ''; // Clear previous content if any
+
+            // Convert Map to array, sort alphabetically by name, then render
+            const sortedExercises = Array.from(allExercises.entries()).sort((a, b) => a[0].localeCompare(b[0]));
+
+            sortedExercises.forEach(([name, details]) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('appendix-item');
+                itemDiv.innerHTML = `
+                    <h3 class="font-bold text-main text-lg mb-1">${name}</h3>
+                    <p class="text-secondary text-sm mb-1"><strong>Description:</strong> ${details.description}</p>
+                    <p class="text-secondary text-sm"><strong>Coaching Focus:</strong> ${details.coaching}</p>
+                `;
+                exerciseAppendixDiv.appendChild(itemDiv);
+            });
+
+            const trainingSpreadsheetBody = document.querySelector('#trainingSpreadsheet tbody');
+            trainingSpreadsheetBody.innerHTML = ''; // Clear previous content if any
+
+            trainingScheduleByWeek.forEach(weekData => {
+                let weekRowSpan = 0;
+                ['Monday', 'Wednesday', 'Friday'].forEach(dayKey => {
+                    if (weekData[dayKey] && weekData[dayKey].exercises) {
+                        weekRowSpan += weekData[dayKey].exercises.length;
+                    }
+                });
+
+                let isFirstRowOfWeek = true;
+
+                ['Monday', 'Wednesday', 'Friday'].forEach(dayKey => {
+                    if (weekData[dayKey] && weekData[dayKey].exercises && weekData[dayKey].exercises.length > 0) {
+                        const sessionData = weekData[dayKey];
+                        const dayRowSpan = sessionData.exercises.length;
+                        let isFirstRowOfDay = true;
+
+                        sessionData.exercises.forEach(exercise => {
+                            const row = trainingSpreadsheetBody.insertRow();
+
+                            if (isFirstRowOfWeek) {
+                                const weekCell = row.insertCell();
+                                weekCell.textContent = `Week ${weekData.week}`;
+                                weekCell.rowSpan = weekRowSpan;
+                                weekCell.classList.add('font-semibold', 'text-main'); // Add styling for merged cells
+                                isFirstRowOfWeek = false;
+                            }
+
+                            if (isFirstRowOfDay) {
+                                const dayCell = row.insertCell();
+                                dayCell.textContent = dayKey.substring(0, 3); // Abbreviate day
+                                dayCell.rowSpan = dayRowSpan;
+                                dayCell.classList.add('font-semibold', 'text-main'); // Add styling for merged cells
+                                isFirstRowOfDay = false;
+                            }
+
+                            row.insertCell().textContent = exercise.name;
+                            row.insertCell().textContent = exercise.setsReps;
+                            row.insertCell().textContent = exercise.estimatedDuration || 'N/A';
+                            row.insertCell().textContent = exercise.restBetweenSets || 'N/A';
+                            row.insertCell().textContent = exercise.restBetweenExercises || 'N/A';
+                            row.insertCell().textContent = exercise.description;
+                            row.insertCell().textContent = exercise.coaching || 'N/A';
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
